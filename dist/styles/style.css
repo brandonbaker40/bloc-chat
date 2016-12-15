@@ -1,0 +1,25 @@
+body {
+    margin:0
+}
+
+#header {
+    background-color: deepskyblue;
+    color: white;
+}
+
+#content {
+    float:left;
+    width:70%;
+    background-color: darkgrey;
+}
+
+#sidebar {
+    float:left;
+    width:30%;
+    background-color: thistle;
+}
+
+#footer {
+    clear:both;
+    background-color: #6d6d6d;
+}
