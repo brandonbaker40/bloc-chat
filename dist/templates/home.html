@@ -1,14 +1,14 @@
-<section class="">
-    <div id="header">
-        <p>Header</p>
+<div id="header">
+    <p>Header</p>
+</div>
+<section id="room-list-sidebar">
+    <div id="room-name-container" ng-repeat="room in rooms">
+        <div>{{room.$value}}</div>
     </div>
-    <div id="room-list-container" ng-repeat="room in rooms">
-        <div>{{room.rooms}}</div>
-    </div>
-    <div id="message-container">
-        <p><!--MESSAGES GO HERE--></p>
-    </div>
-    <div id="footer">
-        <p><!--FOOTER GOES HERE--></p>
-    </div>
+</section>
+<section id="message-container">
+    <p><!--MESSAGES GO HERE---></p>
+</section>
+<section id="footer">
+    <p><!--FOOTER GOES HERE--></p>
 </section>
