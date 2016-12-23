@@ -5,6 +5,9 @@
     <div id="room-name-container" ng-repeat="room in rooms">
         <div>{{room.$value}}</div>
     </div>
+    <div ng-controller="ModalCtrl">
+        <button type="button" ng-click="home.open()">New Room</button>
+    </div>
 </section>
 <section id="message-container">
     <p><!--MESSAGES GO HERE---></p>
