@@ -3,7 +3,7 @@
         <p>Header</p>
     </div>
     <div id="room-name-container" ng-repeat="room in rooms">
-        <div>{{room.$value}}</div>
+        <div ng-click="home.selectRoom(room)">{{room.$value}}</div>
     </div>
     <div ng-controller="ModalCtrl">
         <button type="button" ng-click="home.open()">New Room</button>
@@ -20,7 +20,7 @@
                 <span class="content">{{ message.content }}</span>
            </div>
            <form>
-                <input type="text" placeholder="And then...." class="form-control" ng-click="newMessage">
+                <input type="text" placeholder="And then...." class="form-control" ng-model="home.newMessage">
                <button class="btn" type="button" ng-click="home.sendMessage()">Post</button>
            </form>
     </div>

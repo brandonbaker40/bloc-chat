@@ -3,15 +3,16 @@
         
         $scope.rooms = Room.all;
         
+        var home = this;
         this.selectRoom = function (roomId) {
-            this.currentRoom = roomId;
-            this.messages = Room.getMessages(this.currentRoom.$id);
-
+            home.currentRoom = roomId.$value;
+            console.log(roomId.$value);
         }
         
         this.sendMessage = function () {
-            Message.sendMessage(home.newMessage, home.currentRoom.$id);
-            home.newMessage = "";
+            Message.sendMessage(this.newMessage, home.currentRoom);
+                home.newMessage = "";
+                
         }
         
         this.open = function() {

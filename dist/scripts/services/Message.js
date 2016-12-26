@@ -4,7 +4,9 @@
         var messages = $firebaseArray(ref);
         
     function sendMessage (newMessage, roomId) {
-        var message = { };
+        var message = {
+            roomId: roomId
+        };
         messages.$add(message);
     }
         return {
