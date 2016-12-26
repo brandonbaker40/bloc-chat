@@ -10,8 +10,9 @@
         }
         
         this.sendMessage = function () {
-            Message.sendMessage(this.newMessage, home.currentRoom);
-                home.newMessage = "";
+            Message.sendMessage(this.content, home.currentRoom);
+                this.content = '';
+                console.log(this.content);
                 
         }
         

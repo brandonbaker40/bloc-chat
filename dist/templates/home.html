@@ -17,10 +17,10 @@
        <div>
            <div ng-repeat="message in messages">
                 <strong><span class="username">{{ message.username }} : </span></strong>
-                <span class="content">{{ message.content }}</span>
+                <span class="content">{{ message.content }} helllo </span>
            </div>
            <form>
-                <input type="text" placeholder="And then...." class="form-control" ng-model="home.newMessage">
+                <input type="text" placeholder="And then...." class="form-control" ng-model="home.content">
                <button class="btn" type="button" ng-click="home.sendMessage()">Post</button>
            </form>
     </div>
