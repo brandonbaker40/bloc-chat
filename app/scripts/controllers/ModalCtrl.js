@@ -23,7 +23,3 @@
         .controller('ModalCtrl', ['$scope', '$uibModal', ModalCtrl]);
 })();
 
-
-
-
-
