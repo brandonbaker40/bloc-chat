@@ -3,17 +3,19 @@
         
         $scope.rooms = Room.all;
         
-        var home = this;
+        this.sentAt = "00:00"; //time placeholder
+        this.username = "Brandon" //username placeholder
+        
         this.selectRoom = function (roomId) {
-            home.currentRoom = roomId.$value;
+            this.currentRoom = roomId.$value;
             console.log(roomId.$value);
+            Room.getMessages(this.currentRoom);
         }
         
         this.sendMessage = function () {
-            Message.sendMessage(this.content, home.currentRoom);
+            Message.sendMessage(this.currentRoom, this.content, this.sentAt, this.username);
                 this.content = '';
                 console.log(this.content);
-                
         }
         
         this.open = function() {

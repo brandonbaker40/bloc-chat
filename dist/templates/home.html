@@ -12,15 +12,15 @@
 <section class="messages-container" >
      <div>
        <div>
-           <h2 class="room-title">{{ selectedRoom }}</h2>
+           <h2 class="room-title">{{ home.currentRoom }}</h2>
        </div>
        <div>
-           <div ng-repeat="message in messages">
+           <div ng-repeat="message in home.messages">
                 <strong><span class="username">{{ message.username }} : </span></strong>
-                <span class="content">{{ message.content }} helllo </span>
+                <span class="content">{{ message.content }} {{ message.sentAt }}</span>
            </div>
            <form>
-                <input type="text" placeholder="And then...." class="form-control" ng-model="home.content">
+                <input type="text" placeholder="Say something..." class="form-control" ng-model="home.content">
                <button class="btn" type="button" ng-click="home.sendMessage()">Post</button>
            </form>
     </div>
