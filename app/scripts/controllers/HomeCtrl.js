@@ -9,7 +9,7 @@
         this.selectRoom = function (roomId) {
             this.currentRoom = roomId.$value;
             console.log(roomId.$value);
-            Room.getMessages(this.currentRoom);
+            this.messages = Room.getMessages(this.currentRoom);
         }
         
         this.sendMessage = function () {
