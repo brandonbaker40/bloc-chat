@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <div class='header'>Choose a username.</div>
+</div>
+<form name="username" class="modal-body">
+    <div class="form-group">
+        <input type="text" class="form-control" ng-minlength="usernameLength" placeholder="" name="newUsername" ng-model="newUsername" required>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-show="username.newUsername.$valid" ng-click="createUser()">Set Username</button>
+    </div>
+</form>
