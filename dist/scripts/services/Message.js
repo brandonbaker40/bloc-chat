@@ -20,3 +20,5 @@
         .module('blocChat')
         .factory('Message', ['$firebaseArray', Message]);
 })();
+
+// sends messages already

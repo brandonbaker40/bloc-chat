@@ -1,13 +1,21 @@
+<div id="header"></div>
 <section id="room-list-sidebar">
-    <div id="header">
-        <p>Header</p>
+    <div id="app-name">
+      <h2>Bloc Chat</h2>
     </div>
+    <div class="list-head">Rooms</div>
     <div id="room-name-container" ng-repeat="room in rooms">
         <div ng-click="home.selectRoom(room)">{{room.$value}}</div>
     </div>
-    <div ng-controller="ModalCtrl">
+    <div ng-controller="ModalCtrl" clas="new-room-button">
         <button type="button" ng-click="home.open()">New Room</button>
     </div>
+    <div class="profile-info">
+      <!--NEED--><img class="user-pic" ng-src=""/>
+    <div class="display-username">
+        {{ message.username }} <!-- probably wont work.. should make duplicate on Room service -->
+    </div>
+      </div>
 </section>
 <section class="messages-container" >
      <div>
@@ -16,8 +24,8 @@
        </div>
        <div>
            <div ng-repeat="message in home.messages">
-                <strong><span class="username">{{ message.username }} : </span></strong>
-                <span class="content">{{ message.content }} {{ message.sentAt }}</span>
+                <span class="username">{{ message.sentAt }} <strong>{{ message.username }}</strong></span>
+                <span class="content">{{ message.content }}</span>
            </div>
            <form>
                 <input type="text" placeholder="Say something..." class="form-control" ng-model="home.content">
