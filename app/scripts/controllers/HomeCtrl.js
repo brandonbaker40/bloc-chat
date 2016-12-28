@@ -4,7 +4,7 @@
         $scope.rooms = Room.all;
         
         this.sentAt = "00:00"; //time placeholder
-        this.username = "Brandon" //username placeholder
+        this.username = "Anonymous User" //username placeholder
         
         this.selectRoom = function (roomId) {
             this.currentRoom = roomId.$value;
